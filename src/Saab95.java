@@ -1,6 +1,6 @@
 import javafx.scene.paint.Color;
 
-public class Saab95 extends car{
+public class Saab95 extends car implements Movable{
 
 	public boolean turboOn;
 
@@ -27,5 +27,23 @@ public class Saab95 extends car{
 		if (turboOn)
 			turbo = 1.3;
 		return enginePower * 0.01 * turbo;
+	}
+
+	@Override
+	public void move() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void turnleft() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void turnright() {
+		// TODO Auto-generated method stub
+		
 	}
 }

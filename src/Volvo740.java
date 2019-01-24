@@ -1,6 +1,6 @@
 import javafx.scene.paint.Color;
 
-public class Volvo740 extends car{
+public class Volvo740 extends car implements Movable{
 
 	public final static double trimFactor = 1.25;
 
@@ -16,5 +16,23 @@ public class Volvo740 extends car{
 
 	public double speedFactor() {
 		return enginePower * 0.01 * trimFactor;
+	}
+
+	@Override
+	public void move() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void turnleft() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void turnright() {
+		// TODO Auto-generated method stub
+		
 	}	
 }
