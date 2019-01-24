@@ -2,10 +2,10 @@ import javafx.scene.paint.Color;
 
 public abstract class car{
 	
-	public double enginePower; // Engine power of the car
-	public double currentSpeed; // The current speed of the car
-	public Color color; // Color of the car
-	public String modelName; // The car model name
+	private double enginePower; // Engine power of the car
+	private double currentSpeed; // The current speed of the car
+	private Color color; // Color of the car
+	private String modelName; // The car model name
 	
 	public car(Color c, double ep, String m) {
 		
