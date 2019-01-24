@@ -1,4 +1,3 @@
-import javafx.scene.paint.Color;
 
 public abstract class car{
 	
@@ -8,7 +7,10 @@ public abstract class car{
 	public String modelName; // The car model name
 	
 	public car(Color c, double ep, String m) {
-		
+		color = c;
+		enginePower = ep;
+		modelName = m;
+		currentSpeed = 0;
 	}
 
 	public double getEnginePower() {
@@ -48,5 +50,4 @@ public abstract class car{
 	public void brake(double amount) {
 		decrementSpeed(amount);
 	}
-	
 }
