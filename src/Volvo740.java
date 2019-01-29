@@ -5,7 +5,7 @@ public class Volvo740 extends car{
 	public final static double trimFactor = 1.25;
 
 	/**
-	 * Konstruktorn specifik för bilmodellen Saab95
+	 * Konstruktorn specifik för bilmodellen Volvo740
 	 */
 	public Volvo740() {
 		super(Color.RED, 100, "Volvo740");
