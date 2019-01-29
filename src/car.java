@@ -30,7 +30,7 @@ public abstract class car implements Movable{
 	public double getEnginePower() {
 		return enginePower;
 	}
-
+	
 	/**
 	 * getCurrentSpeed returnerar currentSpeed för den angivna bilen
 	 * @return double
@@ -38,7 +38,7 @@ public abstract class car implements Movable{
 	public double getCurrentSpeed() {
 		return currentSpeed;
 	}
-
+	
 	/**
 	 * getColor returnerar Color för den angivna bilen
 	 * @return Color
@@ -53,14 +53,14 @@ public abstract class car implements Movable{
 	public void startEngine() {
 		currentSpeed = 0.1;
 	}
-
+	
 	/**
 	 * startEngine stoppar bilen och ger den en currentSpeed på 0
 	 */
 	public void stopEngine() {
 		currentSpeed = 0;
 	}
-
+	
 	public abstract double speedFactor();
 
 	/**
@@ -68,30 +68,42 @@ public abstract class car implements Movable{
 	 * @param amount anger hur mycket currentSpeed ska öka
 	 */
 	public void incrementSpeed(double amount) {
-		currentSpeed = getCurrentSpeed() + speedFactor() * amount;
+		if(currentSpeed + amount > enginePower) {
+			currentSpeed = enginePower;
+		}
+		else {
+			currentSpeed = getCurrentSpeed() + speedFactor() * amount;
+		}
 	}
-
+	
 	/**
 	 * incrementSpeed minskar currentSpeed baserat på den individuella bilmodellens speedfactor och det angivna talet
 	 * @param amount anger hur mycket currentSpeed ska minska
 	 */
 	public void decrementSpeed(double amount) {
-		currentSpeed = getCurrentSpeed() - speedFactor() * amount;
+		if(currentSpeed + amount < 0) {
+			currentSpeed = 0;
+		}
+		else {
+			currentSpeed = getCurrentSpeed() - speedFactor() * amount;
+		}
 	}
-
+	
 	/**
 	 * Metoden kallar på incrementSpeed för att öka currentSpeed
 	 * @param amount anger hur mycket som den ska öka med
 	 */
 	public void gas(double amount) {
+		if(amount > 1 || amount < 0) return;
 		incrementSpeed(amount);
 	}
-
+	
 	/**
 	 * Metoden kallar på decementSpeed för att minska currentSpeed
 	 * @param amount anger hur mycket som den ska minska med
 	 */
 	public void brake(double amount) {
+		if(amount > 1 || amount < 0) return;
 		decrementSpeed(amount);
 	}
 	
@@ -100,24 +112,24 @@ public abstract class car implements Movable{
 	 */
 	public void move() {
 		switch(dir) {
-			case 1 :
-				y += currentSpeed;
-				break;
-	
-			case 2 :
-				x += currentSpeed;
-				break;
-			
-			case 3 :
-				y -= currentSpeed;
-				break;
-			
-			case 4 :
-				x -= currentSpeed;
-				break;
+		case 1 :
+			y += currentSpeed;
+			break;
+
+		case 2 :
+			x += currentSpeed;
+			break;
+
+		case 3 :
+			y -= currentSpeed;
+			break;
+
+		case 4 :
+			x -= currentSpeed;
+			break;
 		}
 	}
-
+	
 	/**
 	 * Ändrar bilens riktning genom att minska variabeln dir med 1, om den är 1 börjar den om på 4
 	 */
@@ -129,7 +141,7 @@ public abstract class car implements Movable{
 			dir--;
 		}
 	}
-
+	
 	/**
 	 * Ändrar bilens riktning genom att öka variabeln dir med 1, om den är 4 börjar den om på 1
 	 */
