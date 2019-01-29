@@ -1,12 +1,15 @@
 import javafx.scene.paint.Color;
 
-public abstract class car{
-	
+public abstract class car implements Movable{
+
 	public double enginePower; // Engine power of the car
 	public double currentSpeed; // The current speed of the car
 	public Color color; // Color of the car
 	public String modelName; // The car model name
-	
+	private int x = 0;
+	private int y = 0;
+	private int dir = 1;
+
 	public car(Color c, double ep, String m) {
 		color = c;
 		enginePower = ep;
@@ -50,5 +53,45 @@ public abstract class car{
 
 	public void brake(double amount) {
 		decrementSpeed(amount);
+	}
+	@Override
+	public void move() {
+		switch(dir) {
+			case 1 :
+				y++;
+				break;
+	
+			case 2 :
+				x++;
+				break;
+			
+			case 3 :
+				y--;
+				break;
+			
+			case 4 :
+				x--;
+				break;
+		}
+	}
+
+	@Override
+	public void turnleft() {
+		if(dir == 1) {
+			dir = 4;
+		}
+		else {
+			dir--;
+		}
+	}
+
+	@Override
+	public void turnright() {
+		if(dir == 4) {
+			dir = 1;
+		}
+		else {
+			dir++;
+		}
 	}
 }
