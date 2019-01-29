@@ -58,19 +58,19 @@ public abstract class car implements Movable{
 	public void move() {
 		switch(dir) {
 			case 1 :
-				y++;
+				y += currentSpeed;
 				break;
 	
 			case 2 :
-				x++;
+				x += currentSpeed;
 				break;
 			
 			case 3 :
-				y--;
+				y -= currentSpeed;
 				break;
 			
 			case 4 :
-				x--;
+				x -= currentSpeed;
 				break;
 		}
 	}
