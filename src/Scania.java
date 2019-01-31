@@ -1,6 +1,6 @@
 import javafx.scene.paint.Color;
 
-public class Scania extends car{
+public class Scania extends truck{
 
 	public int flatbedAngle = 0;
 
