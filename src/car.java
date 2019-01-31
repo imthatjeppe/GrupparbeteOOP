@@ -153,4 +153,36 @@ public abstract class car implements Movable{
 			dir++;
 		}
 	}
+	
+	/**
+	 * Returnerar x
+	 * @return int
+	 */
+	public int getX() {
+		return x;
+	}
+	
+	/**
+	 * Returnerar y
+	 * @return int
+	 */
+	public int getY() {
+		return y;
+	}
+	
+	/**
+	 * Returnerar riktning
+	 * @return int
+	 */
+	public int getDir() {
+		return dir;
+	}
+	
+	/**
+	 * Returnerar modellnamnet
+	 * @return String
+	 */
+	public String getModelName() {
+		return modelName;
+	}
 }
