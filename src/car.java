@@ -1,9 +1,7 @@
 import javafx.scene.paint.Color;
 
-public abstract class car extends vehicle implements Movable{
+public abstract class car extends vehicle{
 
-	
-	
 	/**
 	 * Konstruktor för att skapa en bil
 	 * @param c anger färgen bilen ska ha
@@ -13,5 +11,4 @@ public abstract class car extends vehicle implements Movable{
 	public car(Color c, double ep, String m) {
 		super(c, ep, m);
 	}
-	
 }

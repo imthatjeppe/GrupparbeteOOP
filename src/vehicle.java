@@ -1,6 +1,6 @@
 import javafx.scene.paint.Color;
 
-public abstract class vehicle {
+public abstract class vehicle implements Movable{
 	
 	protected double enginePower; // Engine power of the car
 	protected double currentSpeed; // The current speed of the car
@@ -179,4 +179,3 @@ public abstract class vehicle {
 		return modelName;
 	}
 }
-
