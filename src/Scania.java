@@ -10,8 +10,8 @@ public class Scania extends car{
 	 * @param ep engine power
 	 * @param m modell namn
 	 */
-	public Scania(Color c, double ep, String m) {
-		super(Color.WHITE, 750, "Scania");
+	public Scania(Color c) {
+		super(c, 750, "Scania");
 		stopEngine();
 	}
 	

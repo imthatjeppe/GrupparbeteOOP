@@ -7,8 +7,8 @@ public class Saab95 extends car{
 	/**
 	 * Konstruktorn specifik för bilmodellen Saab95
 	 */
-	public Saab95() {
-		super(Color.BLACK, 125, "Saab95");
+	public Saab95(Color c) {
+		super(c, 125, "Saab95");
 		stopEngine();
 	}
 

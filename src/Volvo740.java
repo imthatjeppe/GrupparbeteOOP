@@ -7,8 +7,8 @@ public class Volvo740 extends car{
 	/**
 	 * Konstruktorn specifik för bilmodellen Volvo740
 	 */
-	public Volvo740() {
-		super(Color.RED, 100, "Volvo740");
+	public Volvo740(Color c) {
+		super(c, 100, "Volvo740");
 		stopEngine();
 	}
 

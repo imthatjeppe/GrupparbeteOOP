@@ -5,8 +5,8 @@ public class Beetle extends car{
 	/**
 	 * Konstruktorn specifik för bilmodellen VW Beetle
 	 */
-	public Beetle() {
-		super(Color.YELLOW, 75, "Beetle");
+	public Beetle(Color c) {
+		super(c, 75, "Beetle");
 		stopEngine();
 	}
 
