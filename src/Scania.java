@@ -19,7 +19,7 @@ public class Scania extends car{
 	 * Returnernar hastighetsfaktorn för den individuella modellen.
 	 */
 	public double speedFactor() {
-		return enginePower * 0.01;
+		return super.enginePower * 0.01;
 	}
 
 	/**
