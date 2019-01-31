@@ -1,6 +1,6 @@
 import javafx.scene.paint.Color;
 
-public abstract class car implements Movable{
+public abstract class car extends vehicle implements Movable{
 
 	protected double enginePower; // Engine power of the car
 	protected double currentSpeed; // The current speed of the car
