@@ -8,8 +8,8 @@ public class Scania extends truck{
 	 * @param ep engine power
 	 * @param m modell namn
 	 */
-	public Scania(Color c, Boolean b) {
-		super(c, 750, "Scania", b);
+	public Scania(Color c, flatbed f) {
+		super(c, 750, "Scania", f);
 		stopEngine();
 	}
 	

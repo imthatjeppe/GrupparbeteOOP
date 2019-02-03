@@ -2,10 +2,8 @@ import javafx.scene.paint.Color;
 
 public abstract class truck extends vehicle{
 	
-	private boolean isFlatbedTruck;
-	private flatbed flatbed;
-	
-	private trailer trailer;
+	private flatbed flatbed = null;
+	private trailer trailer = null;
 	
 	/**
 	 * Konstruktor för att skapa en truck
@@ -13,9 +11,12 @@ public abstract class truck extends vehicle{
 	 * @param ep anger motorns kraft
 	 * @param m anger truckens modell
 	 */
-	public truck(Color c, int ep, String m, Boolean b) {
+	public truck(Color c, int ep, String m, flatbed f) {
 		super(c,ep,m);
-		isFlatbedTruck = b;
+		
+		if(f != null) {
+			flatbed = f;
+		}
 	}
 	
 	@Override
@@ -25,19 +26,19 @@ public abstract class truck extends vehicle{
 		incrementSpeed(amount);
 	}
 	
-	public void addTrailer() {
-		trailer = new trailer();
+	public boolean hasTrailer() {
+		return trailer != null;
 	}
 	
-	public void removeTrailer() {
+	public boolean isFlatbedTruck() {
+		return flatbed != null;
+	}
+	
+	public void connectTrailer(trailer t) {
+		trailer = t;
+	}
+	
+	public void disconnectTrailer() {
 		trailer = null;
-	}
-	
-	public void addFlatbed() {
-		flatbed = new flatbed();
-	}
-	
-	public void removeFlatbed() {
-		flatbed = null;
 	}
 }
