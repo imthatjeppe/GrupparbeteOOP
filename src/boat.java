@@ -11,5 +11,4 @@ public abstract class boat extends vehicle{
 	public boat(Color c, int ep, String m) {
 		super(c,ep,m);
 	}
-
 }

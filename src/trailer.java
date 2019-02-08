@@ -9,4 +9,12 @@ public abstract class trailer {
 		modelname = m;
 		color = c;
 	}
+	
+	public Color getColor() {
+		return this.color;
+	}
+	
+	public String getModelName() {
+		return this.modelname;
+	}
 }

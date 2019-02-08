@@ -2,21 +2,27 @@ import java.util.ArrayList;
 
 public abstract class carLoaderDelegate {
 	
-	ArrayList<car> cars = new ArrayList<car>();
+	ArrayList<vehicle> vehicles = new ArrayList<vehicle>();
 	
-	public void loadCar(car c) {
-		cars.add(c);
+	public void loadVehicle(vehicle v, String modelname) {
+		if(modelname == "cartransporttrailer") {
+			if(!(v instanceof car)) return;
+		}
+		else if(modelname == "carFerry") {
+			if(!(v instanceof car) && !(v instanceof truck)) return;
+		}
+		vehicles.add(v);
 	}
 	
-	public car unloadLastCar() {
-		car car = cars.get(cars.size()-1);
-		cars.remove(car);
-		return car;
+	public vehicle unloadLastVehicle() {
+		vehicle v = vehicles.get(vehicles.size()-1);
+		vehicles.remove(v);
+		return v;
 	}
 	
-	public car unloadFirstCar() {
-		car car = cars.get(0);
-		cars.remove(car);
-		return car;
+	public vehicle unloadFirstVehicle() {
+		vehicle v = vehicles.get(0);
+		vehicles.remove(v);
+		return v;
 	}
 }
