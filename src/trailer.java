@@ -9,5 +9,4 @@ public abstract class trailer {
 		modelname = m;
 		color = c;
 	}
-
 }
