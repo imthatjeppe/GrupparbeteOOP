@@ -25,19 +25,33 @@ public abstract class truck extends vehicle{
 		if(amount > 1 || amount < 0) return;
 		incrementSpeed(amount);
 	}
-	
+	/**
+	 * Detta beskriver om lastbilen har ett släp
+	 * @return Den returnerar en boolean
+	 */
 	public boolean hasTrailer() {
 		return trailer != null;
 	}
 	
+	/**
+	 * Kollar om lastbilen är en flatbed
+	 * @return Den returnerar en boolean
+	 */
 	public boolean isFlatbedTruck() {
 		return flatbed != null;
 	}
 	
+	/**
+	 * Den kopplar på en trailer till lastbilen.
+	 * @param Man skickar med en trailer
+	 */
 	public void connectTrailer(trailer t) {
 		trailer = t;
 	}
 	
+	/**
+	 * Den kopplar av en trailer ifrån lastbilen.
+	 */
 	public void disconnectTrailer() {
 		trailer = null;
 	}
