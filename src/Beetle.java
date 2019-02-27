@@ -1,6 +1,6 @@
 import javafx.scene.paint.Color;
 
-public class Beetle extends car{
+public class Beetle extends Car{
 
 	/**
 	 * Konstruktorn specifik för bilmodellen VW Beetle

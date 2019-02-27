@@ -1,6 +1,6 @@
 import javafx.scene.paint.Color;
 
-public class TeslaModelS extends car{
+public class TeslaModelS extends Car{
 
 	/**
 	 * Konstruktorn specifik för bilmodellen Tesla Model S

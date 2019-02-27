@@ -1,19 +1,16 @@
 import javafx.scene.paint.Color;
 
-public abstract class vehicle implements Movable{
+public abstract class Vehicle extends GameObject implements Movable{
 	
 	protected double enginePower; // Engine power of the car
 	protected double currentSpeed; // The current speed of the car
 	private Color color; // Color of the car
-	private String modelName; // The car model name
-	private int x = 0;
-	private int y = 0;
 	private int dir = 1;
 	
-	public vehicle(Color c, double ep, String m) {
+	public Vehicle(Color c, double ep, String m) {
+		super(m);
 		color = c;
 		enginePower = ep;
-		modelName = m;
 		currentSpeed = 0;
 	}
 	/**
@@ -148,34 +145,10 @@ public abstract class vehicle implements Movable{
 	}
 	
 	/**
-	 * Returnerar x
-	 * @return int
-	 */
-	public int getX() {
-		return x;
-	}
-	
-	/**
-	 * Returnerar y
-	 * @return int
-	 */
-	public int getY() {
-		return y;
-	}
-	
-	/**
 	 * Returnerar riktning
 	 * @return int
 	 */
 	public int getDir() {
 		return dir;
-	}
-	
-	/**
-	 * Returnerar modellnamnet
-	 * @return String
-	 */
-	public String getModelName() {
-		return modelName;
 	}
 }

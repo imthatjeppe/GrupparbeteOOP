@@ -1,6 +1,6 @@
 import javafx.scene.paint.Color;
 
-public class Scania extends truck{
+public class Scania extends Truck{
 
 	/**
 	 * Det är en konstruktor för Scania lastbilar
@@ -8,7 +8,7 @@ public class Scania extends truck{
 	 * @param ep engine power
 	 * @param m modell namn
 	 */
-	public Scania(Color c, flatbed f) {
+	public Scania(Color c, Flatbed f) {
 		super(c, 750, "Scania", f);
 		stopEngine();
 	}

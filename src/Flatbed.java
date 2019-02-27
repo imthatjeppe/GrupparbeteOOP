@@ -1,5 +1,5 @@
 
-public class flatbed {
+public class Flatbed {
 	
 	public int flatbedAngle = 0;
 	

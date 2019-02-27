@@ -1,6 +1,6 @@
 import javafx.scene.paint.Color;
 
-public abstract class car extends vehicle{
+public abstract class Car extends Vehicle{
 
 	/**
 	 * Konstruktor för att skapa en bil
@@ -8,7 +8,7 @@ public abstract class car extends vehicle{
 	 * @param ep anger motorns kraft
 	 * @param m anger bilens modell
 	 */
-	public car(Color c, double ep, String m) {
+	public Car(Color c, double ep, String m) {
 		super(c, ep, m);
 	}
 }
