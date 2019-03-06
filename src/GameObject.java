@@ -30,7 +30,12 @@ public abstract class GameObject {
 	}
 	
 	public void setY(double d) {
-		x = d;
+		y = d;
+	}
+	
+	public void resetPosition() {
+		this.setX(0);
+		this.setY(0);
 	}
 	
 	/**
