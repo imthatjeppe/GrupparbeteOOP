@@ -14,7 +14,7 @@ public class CarTransportTrailer extends Trailer {
 	private VehicleLoaderDelegate vehicleLoader;
 	/**
 	 * Lastar bilar
-	 * @param v Modelnamnet
+	 * @param v Fordonet
 	 */
 	public void loadCar(Vehicle v) {
 		vehicleLoader.loadVehicle(v, this.getModelName());
