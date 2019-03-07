@@ -4,6 +4,7 @@ import org.junit.Test;
 
 import javafx.scene.paint.Color;
 
+
 public class UnitTests {
 
 	@Test
@@ -73,5 +74,19 @@ public class UnitTests {
 		
 		assertEquals(-1.25, hej.getY(), "Fel Y");
 		assertEquals(0, hej.getX(), "Fel X");
+		
+		hej.startEngine();
+		assertEquals(0.1, hej.getCurrentSpeed(), "Startar inte");
+		
+	    assertEquals(Color.BLACK, hej.getColor(), "Color");
+	    
+	    assertEquals(100, hej.getEnginePower(), "EnginePower");
+	    
+	   for (int i = 0; i < 100; i++) {
+		    assertEquals(100, hej.getCurrentSpeed(), "incrementSpeed");
+	   }  
+	    
+	    
+		
 	}
 }
