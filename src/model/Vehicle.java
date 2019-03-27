@@ -7,7 +7,7 @@ public abstract class Vehicle extends GameObject implements Movable {
 	protected double enginePower; // Engine power of the car
 	protected double currentSpeed; // The current speed of the car
 	private Color color; // Color of the car
-	private int dir = 1;
+	private int dir = 2;
 
 	public Vehicle(Color c, double ep, String m) {
 		super(m);
@@ -66,7 +66,7 @@ public abstract class Vehicle extends GameObject implements Movable {
 	 * @param amount anger hur mycket currentSpeed ska öka
 	 */
 	public void incrementSpeed(double amount) {
-
+			
 		currentSpeed = getCurrentSpeed() + speedFactor() * amount;
 		if (currentSpeed > enginePower) {
 			currentSpeed = enginePower;
