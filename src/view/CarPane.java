@@ -21,7 +21,7 @@ public class CarPane extends Pane {
 	}
 
 	public void update() {
-		volvoImage.setX(xPos);
+		volvoImage.setTranslateX(xPos);
 		volvoImage.setTranslateY(yPos);
 	}
 
