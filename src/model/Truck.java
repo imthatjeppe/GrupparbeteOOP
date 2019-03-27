@@ -1,3 +1,5 @@
+package model;
+
 import javafx.scene.paint.Color;
 
 public abstract class Truck extends Vehicle {
@@ -38,6 +40,10 @@ public abstract class Truck extends Vehicle {
 		return trailer != null;
 	}
 
+	public Trailer getTrailer() {
+		return trailer;
+	}
+	
 	/**
 	 * Kollar om lastbilen är en flatbed
 	 * 

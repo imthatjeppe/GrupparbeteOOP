@@ -1,3 +1,5 @@
+package model;
+
 import javafx.scene.paint.Color;
 
 public abstract class Boat extends Vehicle{

@@ -1,3 +1,5 @@
+package model;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.junit.Test;
@@ -82,11 +84,31 @@ public class UnitTests {
 	    
 	    assertEquals(100, hej.getEnginePower(), "EnginePower");
 	    
-	   for (int i = 0; i < 100; i++) {
-		    assertEquals(100, hej.getCurrentSpeed(), "incrementSpeed");
-	   }  
+	    Scania sca = new Scania(Color.WHITE, new Flatbed());
 	    
+	    assertEquals(true, sca.isFlatbedTruck(), "is flatbed");
 	    
-		
+	    sca.connectTrailer(new CarTransportTrailer(Color.PINK));
+	    
+	    assertEquals(true, sca.hasTrailer(), "har trailer");
+	    
+	    assertEquals(Color.PINK , sca.getTrailer().getColor(), "färgen på släpet");
+	    
+	    sca.getTrailer().updatePosition(10, 10);
+	    
+	    assertEquals(10, sca.getTrailer().getX(), "släpets x position");
+	    
+	    assertEquals(10, sca.getTrailer().getY(), "släpets y position");
+	    
+	    ((CarTransportTrailer) sca.getTrailer()).loadCar(new Saab95(Color.ORANGE));
+	    
+	    ((CarTransportTrailer) sca.getTrailer()).unloadCar();
+	    
+	    sca.disconnectTrailer();
+	    
+	    assertEquals(false, sca.hasTrailer(), "har trailer");
+	    
+	    assertEquals(7.5, sca.speedFactor(), "speedfactor scania");
+	    
 	}
 }

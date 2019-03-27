@@ -1,3 +1,4 @@
+package model;
 
 public abstract class GameObject {
 	
@@ -31,6 +32,16 @@ public abstract class GameObject {
 	
 	public void setY(double d) {
 		y = d;
+	}
+	
+	/**
+	 * Uppdaterar position på trailern
+	 * @param x  x koordinaten
+	 * @param y  y koordinaten
+	 */
+	public void updatePosition(double x, double y) {
+		this.setX(x);
+		this.setY(y);
 	}
 	
 	public void resetPosition() {

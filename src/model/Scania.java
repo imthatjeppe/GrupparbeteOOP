@@ -1,3 +1,5 @@
+package model;
+
 import javafx.scene.paint.Color;
 
 public class Scania extends Truck{

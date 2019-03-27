@@ -1,12 +1,14 @@
+package model;
+
 import javafx.scene.paint.Color;
 
-public class Beetle extends Car{
+public class TeslaModelS extends Car{
 
 	/**
-	 * Konstruktorn specifik för bilmodellen VW Beetle
+	 * Konstruktorn specifik för bilmodellen Tesla Model S
 	 */
-	public Beetle(Color c) {
-		super(c, 75, "Beetle");
+	public TeslaModelS(Color c) {
+		super(c, 150, "TeslaModelS");
 		stopEngine();
 	}
 

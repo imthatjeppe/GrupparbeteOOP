@@ -1,3 +1,5 @@
+package model;
+
 import javafx.scene.paint.Color;
 
 public abstract class Trailer extends GameObject{
@@ -18,14 +20,5 @@ public abstract class Trailer extends GameObject{
 	 */
 	public Color getColor() {
 		return this.color;
-	}
-	/**
-	 * Uppdaterar position på trailern
-	 * @param x  x koordinatern
-	 * @param y  y koordinatern
-	 */
-	public void updatePosition(double x, double y) {
-		setX(x);
-		setY(y);
 	}
 }

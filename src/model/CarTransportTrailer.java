@@ -1,3 +1,4 @@
+package model;
 
 import javafx.scene.paint.Color;
 
@@ -11,7 +12,7 @@ public class CarTransportTrailer extends Trailer {
 		super(c, "CarTransportTrailer");
 	}
 	
-	private VehicleLoaderDelegate vehicleLoader;
+	private VehicleLoaderDelegate vehicleLoader = new VehicleLoaderDelegate() {};
 	/**
 	 * Lastar bilar
 	 * @param v Fordonet
