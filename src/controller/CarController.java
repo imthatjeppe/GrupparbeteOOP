@@ -22,7 +22,7 @@ public class CarController {
 		};
 		at.start();
 	}
-
+	
 	public void setModel(Vehicle v) {
 		model = v;
 	}
@@ -34,5 +34,5 @@ public class CarController {
 	public void brake(double amount) {
 		model.brake(amount);
 	}
-
+	
 }
