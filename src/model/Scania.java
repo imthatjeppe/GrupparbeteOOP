@@ -19,6 +19,6 @@ public class Scania extends Truck{
 	 * Returnernar hastighetsfaktorn för den individuella modellen.
 	 */
 	public double speedFactor() {
-		return enginePower * 0.01;
+		return enginePower * 0.001;
 	}
 }
