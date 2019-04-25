@@ -24,19 +24,11 @@ public class CarController {
 					cp.update();
 				}
 			}
-
 		};
 		at.start();
 	}
 	/**
-	 * Här bestäms vilken modell som bilen är
-	 * @param v
-	 */
-	public void setModel(Vehicle v) {
-		model = v;
-	}
-	/**
-	 *  Detta är en metod som gör att bilen kan gasa, genom knapar
+	 *  Detta är en metod som gör att bilen kan gasa, genom knappar
 	 */
 	public void gas(double amount) {
 		model.gasAll(amount);
@@ -46,6 +38,16 @@ public class CarController {
 	 */
 	public void brake(double amount) {
 		model.brakeAll(amount);
+	}
+	/**
+	 * Sätter på turbon
+	 */
+	public void turbo() {
+		model.turboAll();
+	}
+	
+	public void flatbed() {
+		model.flatbedAll();
 	}
 
 	private void checkCollision() {

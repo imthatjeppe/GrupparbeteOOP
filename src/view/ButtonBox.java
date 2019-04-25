@@ -13,6 +13,8 @@ public class ButtonBox extends HBox {
 	private Spinner<Integer> spinner;
 	private Button gasButton;
 	private Button brakeButton;
+	private Button turboButton;
+	private Button flatbedButton;
 
 	public ButtonBox(CarController cc) {
 		this.controller = cc;
@@ -29,6 +31,16 @@ public class ButtonBox extends HBox {
 		brakeButton.setOnAction(e -> {
 			controller.brake(spinner.getValue() / 100.0);
 		});
+		turboButton.setOnAction(e ->{
+			controller.turbo();
+			if(turboButton.getText() == "Turbo On") turboButton.setText("Turbo Off");
+			else turboButton.setText("Turbo On");
+		});
+		flatbedButton.setOnAction(e ->{
+			controller.flatbed();
+			if(flatbedButton.getText() == "Flatbed up") flatbedButton.setText("Flatbed down");
+			else flatbedButton.setText("Flatbed up");
+		});
 	}
 
 	private void addComponents() {
@@ -44,9 +56,15 @@ public class ButtonBox extends HBox {
 
 		brakeButton = new Button("Brake");
 		brakeButton.setPrefSize(100, 20);
+		
+		turboButton = new Button("Turbo On");
+		turboButton.setPrefSize(100, 20);
+		
+		flatbedButton = new Button("Flatbed up");
+		flatbedButton.setPrefSize(100, 20);
 
 		spinnerBox.getChildren().addAll(spinner);
-		buttonsBox.getChildren().addAll(gasButton, brakeButton);
+		buttonsBox.getChildren().addAll(gasButton, brakeButton, turboButton, flatbedButton);
 		container.getChildren().addAll(spinnerBox, buttonsBox);
 
 		this.getChildren().addAll(container);

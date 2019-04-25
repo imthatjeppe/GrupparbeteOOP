@@ -32,13 +32,29 @@ public class CarModel {
 		for (Vehicle vehicle : vehicles) {
 			vehicle.gas(amount);
 		}
-
 	}
 
 	public void brakeAll(double amount) {
 		for (Vehicle vehicle : vehicles) {
 			vehicle.brake(amount);
 		}
+	}
 
+	public void turboAll() {
+		for (Vehicle vehicle : vehicles) {
+			if(vehicle instanceof Saab95) {
+				((Saab95) vehicle).turboSwitch();
+			}
+		}
+	}
+	
+	public void flatbedAll() {
+		for (Vehicle vehicle : vehicles) {
+			if(vehicle instanceof Truck) {
+				if(((Truck) vehicle).isFlatbedTruck()) {
+					Flatbed.flatbedSwitch(vehicle.getCurrentSpeed());
+				}
+			}
+		}
 	}
 }

@@ -27,6 +27,11 @@ public class Saab95 extends Car{
 	public void setTurboOff() {
 		turboOn = false;
 	}
+	
+	public void turboSwitch() {
+		if(turboOn) setTurboOff();
+		else setTurboOn();
+	}
 
 	/**
 	 * Returnerar hastighetsfaktorn för den individuella bilmodellen
