@@ -2,13 +2,13 @@ package model;
 
 public class Flatbed {
 	
-	public int flatbedAngle = 0;
+	public static int flatbedAngle = 0;
 	
 	/**
 	 * Höjer flatbed och förändrar flatbed positivt
 	 * @param amount Hur mycket det ändras
 	 */
-	public void higherFlatbed(int amount, double currentSpeed){
+	public static void higherFlatbed(int amount, double currentSpeed){
 		if(currentSpeed > 0) return;
 		if(amount < 0) return;
 		flatbedAngle += amount;
@@ -21,7 +21,7 @@ public class Flatbed {
 	 * Sänker flatbed och förändrar flatbed negativt
 	 * @param amount Hur mycket det ändras
 	 */
-	public void lowerFlatbed(int amount, double currentSpeed){
+	public static void lowerFlatbed(int amount, double currentSpeed){
 		if(currentSpeed > 0) return;
 		if(amount < 0) return;
 		flatbedAngle -= amount;
